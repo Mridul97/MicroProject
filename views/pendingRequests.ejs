@@ -1,0 +1,12 @@
+<% include ./partials/header %>
+<h1> Pending Requests</h1>
+
+<%pendingRequests.forEach(function(request) { %>
+     
+     <div>
+         <% var path = "/users/" + request._id ; %>
+        <li class="btn btn-default btn-lg btn-block mt-3"> <a href = "<%= path %>"><%= request.firstname %><span> <%= request.lastname %></span></a></li>
+     </div>    
+
+<% }); %>
+<% include ./partials/footer %>

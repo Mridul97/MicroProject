@@ -1,0 +1,77 @@
+<% include ./partials/header %>
+
+<div class="row">
+	<div class="col-md-1"></div>
+	<div class="col-md-7 ">
+	   
+			<h1 ><%= user.firstname + " " + user.lastname %></h1>
+		<div class="thumbnail">
+			<img class = "img-responsive" src="<%= user.image %>" alt="user profile image">
+			<div class="caption"><a href="mailto:<%= user.email %>"><%= user.email %></a></div>
+		</div>
+		</div>
+	
+	<div class="col-md-3">
+
+
+<%  var flag = 0 ;
+    user.friends.forEach(function(id){                              /* if logged in user is a friend of the user */
+                    if(id.equals(currentUser._id)){
+                        flag = 2 ;
+                    }
+                }); 
+    if(flag == 2){           
+     var path1 = "/users/" + user._id + "/friends"; %>
+    <li class="btn btn-default btn-lg btn-block mt-3"><a href = "<%= path1 %>">Friends!!</a></li>
+    <% } %>  
+    
+<% user.friendRequests.forEach(function(id){                              
+                    if(id.equals(currentUser._id)){
+                        flag = 3 ;
+                    }
+                });
+    if (flag == 3) {            %>
+        <li class="btn btn-default btn-lg btn-block mt-3">Request Sent</li>
+        <% } %>
+<% user.pendingRequests.forEach(function(id){                              
+                    if(id.equals(currentUser._id)){
+                        flag = 4 ;
+                    }
+                }); 
+        if (flag == 4) { var path = "/users/" + currentUser._id + "/friendRequests/" + user._id ;   %>
+        <li class="btn btn-default btn-lg btn-block mt-3"><a href = "<%= path %>">Accept Request</a></li>
+        <% } %>               
+
+
+
+<% if(currentUser && user._id.equals(currentUser._id)){              /* if user is the owner */%> 
+    
+    <% var path1 = "/users/" + user._id + "/friends"; %>
+    <div class = " text-center  ">
+    <li class="btn btn-default btn-lg btn-block mt-3"><a href = "<%= path1 %>">Friends!!</a></li>
+    </div>
+    <div class = " text-center  ">
+    <% var path2 = "/users/" + user._id + "/addfriends"; %>
+    </div>
+    <div class = " text-center  ">    
+    <li class="btn btn-default btn-lg btn-block mt-3"><a href = "<%= path2 %>">Add Friends!!</a></li>
+    </div>
+    <% var path = "/users/" + user._id + "/friendrequests" ;%>
+    <div class = " text-center  ">    
+    <li class="btn btn-default btn-lg btn-block mt-3 "><a href = "<%= path %>">Friend Requests!!</a></li>
+    </div>
+    <% var path3 = "/users/" + user._id + "/pendingrequests" ;%>
+    <div class = " text-center  ">    
+    <li class="btn btn-default btn-lg btn-block mt-3"><a href = "<%= path3 %>">Pending Requests!!</a></li>
+    </div>
+<% } else if(flag == 0 ){
+    var path1 = "/users/" + currentUser._id + "/addfriends/" + user._id ; %>
+    <li class="btn btn-default btn-lg btn-block mt-3"><a href = "<%= path1 %>">Add Friend</a></li>
+<% } %>      
+ 
+
+
+</div>
+</div>
+
+<% include ./partials/footer %>

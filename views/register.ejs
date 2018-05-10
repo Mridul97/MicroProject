@@ -1,0 +1,27 @@
+<% include ./partials/header %>
+<h1>Register form!!!</h1>
+
+<form action="/register" method="POST">
+    <div class="form-group">
+        <input class="form-control" type="text" name="firstname" placeholder="First Name">
+    </div>
+    <div class="form-group">
+        <input class="form-control" type="text" name="lastname" placeholder="Last Name">
+    </div>
+    <div class="form-group">
+            <input class="form-control" type="text" name="image" placeholder="Photo url">
+    </div>
+    <div class="form-group">
+        <input class="form-control" type="email" name="email" placeholder="Email">
+    </div>
+    <div class="form-group">
+        <input class="form-control" type="text" name="username" placeholder="Username">
+    </div>
+    <div class="form-group">
+        <input class="form-control" type="password" name="password" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+    </div>
+</form>
+<% include ./partials/footer %>

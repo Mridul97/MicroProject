@@ -1,0 +1,13 @@
+<% include ./partials/header %>
+<h1> Friends</h1>
+
+<%friends.forEach(function(friend) { %>
+     
+     <div>
+         <% var path = "/users/" + friend._id ; %>
+         <li class="btn btn-default btn-lg btn-block mt-3"><a href = "<%= path %>"><%= friend.firstname %><span> <%= friend.lastname %></span></a></li>
+     </div>    
+
+<% }); %>
+
+<% include ./partials/footer %>
