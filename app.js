@@ -10,8 +10,8 @@ var passportLocalMongoose = require("passport-local-mongoose");
 var session = require("express-session");
 var bodyParser = require("body-parser");
 
-
-mongoose.connect(process.env.DATABASEURL);
+var url =  process.env.DATABASEURL || "mongodb://localhost/mini_project";
+mongoose.connect(url);
 
 app.use(session({
     secret : "Love to code",
