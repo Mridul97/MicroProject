@@ -12,7 +12,6 @@ var bodyParser = require("body-parser");
 
 
 mongoose.connect(process.env.DATABASEURL);
-//mongoose.connect("mongodb://mridul:moon@ds119800.mlab.com:19800/microproject");
 
 app.use(session({
     secret : "Love to code",
