@@ -2,13 +2,25 @@ body {
     background-color: #0074D9;
     color: white;
 }
-h1{
+.sitehead{
     margin-left: 50px;
 }
 h3{
     margin-top: 50px;
 }
 
+form{
+    margin-top: 20px;
+}
+
 .footer{
     margin-top: 100px;
+}
+
+.formcon{
+    margin-top: 250px;
+}
+
+button{
+    color : black;
 }
