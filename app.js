@@ -268,7 +268,7 @@ app.post("/register", function(req, res){
        if(err){
            console.log(err);
             req.flash("error", err.message);
-           return res.render('register'); 
+           return res.redirect('/register'); 
        }
        passport.authenticate("local")(req, res, function(){
           req.flash("success", "You signed up successfully, " + user.firstname );
