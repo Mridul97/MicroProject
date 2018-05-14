@@ -16,10 +16,15 @@ h3{
 }
 
 .formcon{
-    margin-top: 250px;
+    margin-top: 150px;
 }
 
 .formmar{
     color : black;
+}
+
+.divform{
+    width : 40%;
+    margin: auto;
 }
 

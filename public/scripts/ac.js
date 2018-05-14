@@ -8,7 +8,7 @@ $('#bar').keyup(function(){
     //alert( "Data Saved: " + msg );
     console.log(msg);
     $( "#searchResult" ).html("");
-    if(msg.length > 1 ){
+    if(msg.length >= 1 ){
     msg.forEach(function(user){
         console.log(user.username);
         var path = "/users/" + user._id ;
