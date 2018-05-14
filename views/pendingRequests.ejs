@@ -1,6 +1,10 @@
 <% include ./partials/header %>
 <h1> Pending Requests</h1>
 
+<%if(pendingRequests.length < 1){ %>
+    <h3 class = "defaulth3">No Pending Requests</h3>
+<% } %>
+
 <%pendingRequests.forEach(function(request) { %>
      
      <div>

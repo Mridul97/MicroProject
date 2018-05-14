@@ -1,6 +1,10 @@
 <% include ./partials/header %>
 <h1> Friends</h1>
 
+<%if(friends.length < 1){ %>
+    <h3 class = "defaulth3">No Friends</h3>
+<%} %>
+
 <%friends.forEach(function(friend) { %>
      
      <div>

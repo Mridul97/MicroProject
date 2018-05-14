@@ -1,6 +1,10 @@
 <% include ./partials/header %>
 <h1> Find Friends</h1>
 
+<%if(suggestions.length < 1){ %>
+    <h3 class = "defaulth3">No Friends To Be Added</h3>
+<% } %>
+
 <%suggestions.forEach(function(suggestion) { %>
      
      <div class="row">
