@@ -22,7 +22,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(__dirname + "/public"));
 app.use(flash());
-//app.use("/", indexRoutes);
+
 
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
