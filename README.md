@@ -6,31 +6,27 @@ To see the website, go to the link :- https://infinite-escarpment-36399.herokuap
 
 ## Steps to test the website : 
 
-Steps to test Micro Project Social Website:
-
-STEPS TO TEST THE WEBSITE
-
 There are five users in the database with usernames harry, ron, hermione, neville and ginny. Password for all the five users is “password”.
 
 
-SIGN UP/ REGISTER NEW USER
+### SIGN UP/ REGISTER NEW USER
 
 Click on the Sign Up option in the header section of the webpage.
 Enter all the details, and click on register. You will be redirected to the profile of newly created user.
 If there is an error in creating a new user, then that error will be displayed and you will be redirected to register page.
 
-LOGIN AN EXISTING USER 
+### LOGIN AN EXISTING USER 
 
 Click on the Login option in the header section of the webpage.
 Enter “harry” in the username section and “password” in the password section, and click on login. You will be redirected to the profile of harry.
 If there is an error in creating a new user, then you will be redirected to login page.
 
-LOGOUT AN USER
+### LOGOUT AN USER
 
 Login with username as “harry” and password as “password”.
 Click the logout option in the navbar of the website.
 
-PROFILE PRIVACY
+### PROFILE PRIVACY
 
 Login with username as “harry” and password as “password”.
 On the profile page, click on the friends option. Here, you will see all the friends of harry.
@@ -38,7 +34,7 @@ Click on any friend let’s say ron, click on friends option on ron’s profile,
 Go to the profile page of harry by clicking on signed in as harry in the navbar.
 Click on the find friends option, here you will see more users to whom harry can send friend request. Click on any user, let’s say neville. In the neville’s profile you will not be able to see neville’s friends because harry and neville are not friends.
 
-USER FEATURES
+### USER FEATURES
 
 Login with username as “harry” and password as “password”.
 Click on the find friends option, here you will see more users to whom harry can send friend request. Click on add friend for neville, a friend request has been sent to neville.
@@ -48,7 +44,7 @@ Click the logout option in the navbar.
 Login with username as “neville” and password as “password”.
 Go to the friend requests option on the profile page, there you will see a request of harry potter (you can accept the request by clicking on accept request option). Click on harry potter, click on the accept request option on harry’s profile.
 
-SEARCHING A USER
+### SEARCHING A USER
 
 Login with username as “harry” and password as “password”.
 On the search bar in the header section of the website, search for a user name let’s say hermione ( as you will be typing the name you will see that the search box displays auto suggestions, you can click on the auto suggestion to go to the profile of the suggested user). After that select the option corresponding to username and click on search.
@@ -60,7 +56,7 @@ Fuzzy search implementation :-  Go to the profile page of harry by clicking on s
 
 Auto suggestions works only for username.
 
-PROFILE VIEW OF ANOTHER USER
+### PROFILE VIEW OF ANOTHER USER
 
 Let’s say that you are logged in as harry and you are viewing the profile of ron,
 
@@ -72,26 +68,10 @@ If harry has received a friend request from ron, then there will be an option to
 
 Otherwise, then there will be an option of add friend i.e., to send friend request to ron on ron’s profile.
 
-UI OF THE WEBSITE
+### UI OF THE WEBSITE
 
 If a user is logged in the website, then there will be an option of Logout in the navbar of the website.
 
 If no user is logged in, then there will be options of Login and Sign Up in the navbar of the website.
 
 UI is very basic. Flash messages are used for displaying error and success messages.
-
-## User Features
-
-A user can see its pending requests , can send friend request and can accept friend request. A user can find more friends by going to Find Friends.
-
-## User Profile
-
-A user has a profile, anyone can see the profile but there is restriction to what content a user can see. The public profile will have all the basic info about the user. But if user is a friend then user can also see friends list of the user. 
-
-## UI
-
-UI is very basic. I have used HTML , CSS , JS for frontend with jQuery and Bootstrap. For the backend I have used NodeJs with MongoDB.
-
-## Searching for a user
-
-There is also an option to search for users by username , firstname or lastname. I have implemented a fuzzy search. An automatic suggestion box is implemented for username search using AJAX and jQuery.
